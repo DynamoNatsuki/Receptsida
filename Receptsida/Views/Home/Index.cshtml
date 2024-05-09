@@ -1,0 +1,22 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome!</h1>
+    <p>This is my recipe page.</p>
+
+
+    <h2>Recipes</h2>
+    @foreach (Recipe recipe in Model.Recipes)
+    {
+        <p>@recipe.Name</p>
+    }
+
+    <h2>Ingredients</h2>
+    @foreach (Ingredients ingredients in Model.Ingredients)
+    {
+        <p>@ingredients.Name</p>
+    }
+</div>
